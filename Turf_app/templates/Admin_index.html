@@ -1,0 +1,451 @@
+<!doctype html>
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="zxx"> <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" lang="zxx"> <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" lang="zxx"> <![endif]-->
+<!--[if gt IE 8]><!-->	<html class="no-js" lang="zxx"> <!--<![endif]-->
+
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Turf</title>
+
+	{% load static %}
+
+
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" href="{% static 'apple-touch-icon.png' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/transitions.css' %}">
+	<link rel="stylesheet" href="{% static 'css/prettyPhoto.css' %}"
+	<link rel="stylesheet" href="{% static 'css/swiper.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}">
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.theme.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'css/customScrollbar.css' %}">
+	<link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/color.css' %}">
+	<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+	<script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+		<!--************************************
+				Header Start
+		*************************************-->
+		<header id="tg-header" class="tg-header tg-haslayout" style="background-color:#343a40">
+			<div class="container">
+				<div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+					<div class="row">
+						<div class="tg-topbar tg-haslayout">
+							<nav id="tg-topaddnav" class="tg-topaddnav">
+								<div class="navbar-header">
+									<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-addnavigationm-mobile">
+										<i class="fa fa-arrow-right"></i>
+									</button>
+								</div>
+								
+								<div id="tg-addnavigationm-mobile" class="tg-addnavigationm-mobile collapse navbar-collapse">
+									
+									<div class="tg-colhalf pull-right">
+										
+										<nav class="tg-addnav">
+											<ul>
+												<li class="active">  
+													<a href="{% url 'Admin_signupdetails' %}">
+														<div class="btn btn-success">Registration update</div> </a>
+												</li>
+												<li class="active">  
+													<div class="dropdown">
+														<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+															<i class="fa fa-gear"></i>  Settings
+														</button>
+														<div class="dropdown-menu" aria-labelledby="dropdownMenuButton"><br>
+														 &nbsp;&nbsp;&nbsp; <a class="dropdown-item" href="#"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;Admin</a><br><br>
+														 &nbsp;&nbsp;&nbsp;<a class="dropdown-item" href="#" data-toggle="modal"
+														 data-target="#myModal"><i class="fa fa-key" aria-hidden="true"></i>&nbsp;Change Password </a><br><br>
+														 &nbsp;&nbsp;&nbsp;<a class="dropdown-item" href="{% url 'Admin_logout' %}"><i class="fa fa-sign-out " aria-hidden="true"></i>&nbsp;Logout</a><br>
+														</div>
+													  </div>
+
+												
+												</li>
+									
+												</ul>
+												</nav>
+												</div>
+												<div class="tg-colhalf pull-right">
+													<nav class="tg-addnav">
+														<ul>
+												<li class="active">
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+													&nbsp;&nbsp;
+
+													</li>
+												
+												
+														
+																<li class="active">
+																	<a href="{% url 'Admin_notification' %}"><button type="button" class="btn btn-primary "  style="margin-bottom:20px;">
+																		NOTIFICATIONS <span class="badge badge-light"></span>
+																	  </button></a>
+																	
+															
+																		</li>
+																		<li class="active">
+																			<div class="dropdown show">
+																				<a class="btn btn-warning dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+																				  Bookings
+																				</a>
+																			  
+																				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+																				  <a class="dropdown-item" href="{% url 'Admin_Turfbooking' %}">Turf Bookings</a><br><br>
+																				  <a class="dropdown-item" href="{% url 'Admin_Ticketbooking' %}">Ticket Bookings</a>
+																				</div>
+																			  </div>
+																				</li>
+                                        </ul>
+                                    </nav>
+                                </div>
+								</div>
+								</nav>
+						<nav id="tg-nav" class="tg-nav brand-center">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#tg-navigationm-mobile">
+									<i class="fa fa-bars"></i>
+								</button>
+								<strong class="tg-logo">
+									<a href="index-2.html"><img src="{% static 'images/logo.png' %}" alt="image description"></a>
+								</strong>
+							</div>
+							<div id="tg-navigationm-mobile" class="tg-navigation">
+								<div class="tg-colhalf">
+									
+                                    <ul>
+                                        <li class="active">
+                                            <a href="{% url 'Admin_index' %}"> Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'Admin_Turf_requests' %}">Turfs Requests</a>
+                                            
+                                        </li>
+										<li>
+                                            <a href="{% url 'Admin_viewshopping' %}">Shopping</a>
+                                            
+                                        </li>
+                                       
+									</ul>
+                                </div>
+                                <div class="tg-colhalf">
+                                    <ul>
+										<li>
+                                            <a href="{% url 'Admin_view_matches' %}">Matches</a>
+                                        </li>
+										<li>
+                                            <a href="{% url 'Admin_matchresult' %}">Match Result</a>
+                                            
+                                        </li>
+										 <li>
+											<a href="{% url 'Admin_contact' %}">Contact Us</a>
+											
+										 </li>
+									</ul>
+                                    </ul>
+                                </div> 
+							</div>
+						</nav>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+
+		{%block content%} 
+		<!--************************************
+				Header End
+		*************************************-->
+		<!--************************************
+				Home Slider Start
+		*************************************-->
+		<div class="tg-sliderbox">
+			<div class="tg-imglayer">
+				<img src="{% static 'images/bg-pattran.png' %}" alt="image desctription">
+			</div>
+			<div id="tg-home-slider" class="tg-home-slider tg-haslayout">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="container">
+							<figure class="floating">
+								<img src="{% static 'images/slider/img-01.png' %}"; alt="image description">
+							</figure>
+							<div class="tg-slider-content">
+								<h1>PLAY WITH <span>PEACE</span></h1>
+								<!-- <div class="tg-btnbox">
+									<h2>from june 27</h2>
+									<a class="tg-btn" href="#"><span>read more</span></a>
+									<a class="tg-btn" href="#"><span>book my ticket</span></a>
+								</div> -->
+							</div>
+						</div>
+					</div>
+				
+				</div>
+				<!-- <div class="tg-btn-next">
+					<span>next</span>
+					<span class="fa fa-angle-down"></span>
+				</div>
+				<div class="tg-btn-prev">
+					<span>prev</span>
+					<span class="fa fa-angle-down"></span>
+				</div> -->
+			</div>
+		</div>
+		<!--************************************
+				Home Slider End
+		*************************************-->
+		<!--************************************
+				Main Start
+		*************************************-->
+		
+			<!--************************************
+					About Us Start
+			*************************************-->
+		
+			<!--************************************
+					About Us End
+			*************************************-->
+			<!--************************************
+					Upcoming Match Start
+			*************************************-->
+			<section class=" tg-haslayout tg-bgstyleone">
+				<div class="tg-bgboxone"></div>
+				<div class="tg-bgboxtwo"></div>
+				<div class="tg-bgpattrant">
+					<div class="container">
+						<div class="row">
+							<div class="tg-upcomingmatch-counter">
+								<div class="col-md-4 col-sm-4 col-xs-12 hidden-xs">
+									<figure>
+										<img src="{% static 'images/hello.jpg' %}" alt="image description">
+									</figure>
+								</div>
+								<div class="col-md-8 col-sm-8 col-xs-12">
+									<div class="tg-contentbox">
+										<div class="tg-section-heading"><h2>Sports Turf</h2></div>
+										<div class="tg-description">
+											<p>Artificial turf is a surface of synthetic fibers made to look like natural grass. It is most often used in arenas for sports that were originally or are normally played on grass. However, it is now being used on residential lawns and commercial applications as well. The main reason is maintenance – artificial turf stands up to heavy use, such as in sports, and requires no irrigation or trimming. Domed, covered, and partially covered stadiums may require artificial turf because of the difficulty of getting grass enough sunlight to stay healthy. Artificial turf does have its downside, however: limited life, periodic cleaning requirements, petroleum use, toxic chemicals from infill, and heightened health and safety concerns.</p>
+									<p>FieldTurf’s football systems are designed to meet or exceed FIFA Quality Pro & FIFA Quality certifications.
+
+										FieldTurf is a leader in outdoor and indoor artificial turf football surfacing. FieldTurf football systems are the trusted choice in Major European Football clubs. Ajax Amsterdam, FC Barcelona, FC Sevilla, Borussia Dortmund, 1860 Munich, Olympic Lyonnais, Olympic de Marseille, Everton and West Ham United among others have trusted FieldTurf as their surface of choice.</p>
+										</div>
+									
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			{%endblock%}
+
+			<footer id="tg-footer" class="tg-footer tg-haslayout">
+				<div class="tg-haslayout tg-footerinfobox">
+					<div class="tg-bgboxone"></div>
+					<div class="tg-bgboxtwo"></div>
+					<div class="tg-footerinfo">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-4">
+									<div class="tg-footercol">
+										<div class="tg-posttitle">
+											<h3>signup</h3>
+										</div>
+										<div class="tg-description">
+											<p>A signup page (also known as a registration page) enables users and organizations to independently register and gain access to your system. It is common to have multiple signup pages depending on the types of people and organizations you want to register.</p>
+										</div>
+										<form class="tg-form-newsletter">
+											<fieldset>
+												<!-- <div class="form-group">
+													<input type="email" class="form-control" name="email" placeholder="Email">
+												</div> -->
+												<a href="{% url 'regis' %}"><input type="button" value="signup" class="tg-btn" type="submit"></a>
+											</fieldset>
+										</form>
+										<div class="tg-posttitle">
+											<h3>popular tags</h3>
+										</div>
+										<div class="tg-tags">
+											<a class="tg-tag" >Turfs</a>
+											<a class="tg-tag" >Matches</a>
+											<a class="tg-tag" >Results</a>
+										
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-4"></div>
+								<div class="col-sm-4">
+									<div class="tg-footercol">
+										<!-- <div class="tg-haslayout">
+											<strong class="tg-logo">
+												<a href="#">
+													<img src="images/logo2.png" alt="image description">
+												</a>
+											</strong>
+										</div> -->
+										<div class="tg-description">
+											<p>To edit the info that you use on Google services, like your name and photo, sign in to your account.</p>
+										</div>
+									
+													
+										<ul class="tg-contactinfo">
+											<li>
+												<i class="fa fa-home"></i>
+												<address>New World Business Centre
+													Station Rd, Warmley, Bristol BS30 8XG, United Kingdom</address>
+											</li>
+											<li>
+												<i class="fa fa-envelope-o"></i>
+												Admin@gmail.com
+											</li>
+											<li>
+												<i class="fa fa-phone"></i>
+												<span>+91 7845968545</span>
+											</li>
+										</ul>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="tg-footerbar">
+					<div class="container">
+						<span class="tg-copyright"><a target="_blank" href="https://www.templateshub.net"></a></span>
+						<nav class="tg-footernav">
+							<!-- <ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">All Turfs</a></li>
+								<li><a href="#">Matches</a></li>
+								<li><a href="#">Shop</a></li>
+								<li><a href="#">About us</a></li>
+								<li><a href="#">Contact us</a></li>
+							</ul> -->
+						</nav>
+					</div>
+				</div>
+			</footer>
+
+
+
+
+<!-- Modal -->
+
+<div class="modal" id="myModal" >
+    <div class="modal-dialog">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 grid-margin stretch-card bg-dark text-light modal-content" style="background-color:grey;">
+
+            <!-- Modal Header -->
+            <div class="modal-header" >
+                <h4 class="modal-title">Change Password</h4>
+                <button type="button " class="close " style="color:white;"
+                    data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" >
+				
+                <form action="{% url 'Admin_changepassword' %}" method="post" enctype="multipart/form-data">
+					
+                    {% csrf_token %}
+                    <div class="card">
+                        <div class="card-body" >
+                           
+								<div class="row p-3">
+									<label>New Password</label>
+									   <input type="password" class="form-control" name="password" id="newpass">
+									</div>
+									<div class="row p-3">
+										<label>Confirm Password</label>
+										   <input type="password" class="form-control" name="conpassword" id="conpassword">
+										</div>
+										<span id='message'></span>
+                <br>
+            
+     <script>
+ $('#conpassword').on('change', function () {
+  if ($('#newpass').val() == $('#conpassword').val()) {
+    $('#message').html('Matching').css('color', 'white');
+  } else 
+    $('#message').html('Not Matching').css('color', 'red');
+});
+    </script>
+                            </div>
+                            <br>
+                            <div  style="float:right;padding-bottom:20px;">
+                                <button type="submit" 
+                                    class="btn btn-outline-primary btn-icon-text ">
+                                    <i class="text-primary mdi mdi-send btn-icon-prepend"></i>
+                                    Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- sweet alert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+{% if msg_success %}
+<script>
+Swal.fire({
+	position: 'center',
+	icon: 'success',
+	text: '{{ msg_success }}',
+	showConfirmButton: false,
+	timer: 3000
+}).then(function () {
+	javascript: history.go(-2);
+})
+
+</script>
+{% endif %}
+
+
+
+
+	<script src="js/vendor/jquery-library.js"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script src="js/customScrollbar.min.js"></script>
+	<script src="js/owl.carousel.js"></script>
+	<script src="js/isotope.pkgd.js"></script>
+	<script src="js/prettyPhoto.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/jquery-ui.js"></script>
+	<script src="js/countTo.js"></script>
+	<script src="js/appear.js"></script>
+	<script src="js/main.js"></script>
+
+
+</body>
+
+
+</html>
